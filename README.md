@@ -1,3 +1,9 @@
+Generate PHP classes:
+vendor/goetas/xsd2php/bin/xsd2php.php convert:php UBL-Invoice-2.0.xsd --ns-map='urn:oasis:names:specification:ubl:schema:xsd:Invoice-2;UBL\Invoice' --ns-map='urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2;UBL\Common ExtensionComponents' --ns-map='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2;UBL\CommonBasicComponents' --ns-map='urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2;UBL\UnqualifiedDataTypesSchema Module' --ns-map='urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2;UBL\QualifiedDatatypes' --ns-map='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2;UBL\CommonAggregateComponents' --ns-map='urn:un:unec e:uncefact:codelist:specification:66411:2001;UBL\CodeList\Specification\IANAMIMEMediaType' --ns-map='urn:un:unece:uncefact:codelist:specification:IANAMIMEMediaType:2003;UBL\Codelist\Specification\IANAMIMEMediaType' --ns-map='urn:un:unece:uncef act:codelist:specification:54217:2001;UBL\CodeList\Specification\54217' --ns-map='urn:un:unece:uncefact:codelist:specification:5639:1988;UBL\CodeList\Specification\5639' --ns-dest='UBL\;src/UBL' --ns-dest='\;src/UBL'
+
+Generate YML files:
+vendor/goetas/xsd2php/bin/xsd2php.php convert:jms-yaml UBL-Invoice-2.0.xsd --ns-map='urn:oasis:names:specification:ubl:schema:xsd:Invoice-2;UBL\Invoice' --ns-map='urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2;UBL\C ommonExtensionComponents' --ns-map='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2;UBL\CommonBasicComponents' --ns-map='urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2;UBL\UnqualifiedDataTypesS chemaModule' --ns-map='urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2;UBL\QualifiedDatatypes' --ns-map='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2;UBL\CommonAggregateComponents' --ns-map='urn:un :unece:uncefact:codelist:specification:66411:2001;UBL\CodeList\Specification\IANAMIMEMediaType' --ns-map='urn:un:unece:uncefact:codelist:specification:IANAMIMEMediaType:2003;UBL\Codelist\Specification\IANAMIMEMediaType' --ns-map='urn:un:unece: uncefact:codelist:specification:54217:2001;UBL\CodeList\Specification\54217' --ns-map='urn:un:unece:uncefact:codelist:specification:5639:1988;UBL\CodeList\Specification\5639' --ns-dest='UBL\;src/UBL' --ns-dest='\;src/UBL'
+
 xsd2php
 =======
 
@@ -221,4 +227,3 @@ Note
 
 I'm sorry for the terrible written english within the documentation, I'm trying to improve it.
 Pull Requests are welcome.
-
