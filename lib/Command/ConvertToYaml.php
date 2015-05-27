@@ -34,12 +34,12 @@ class ConvertToYaml extends AbstractConvert
         $dumper = new Dumper();
 
         $pathGenerator = new Psr4PathGenerator($targets);
-        $progress = $this->getHelperSet()->get('progress');
+        //$progress = $this->getHelperSet()->get('progress');
 
-        $progress->start($output, count($items));
+        //$progress->start($output, count($items));
 
         foreach ($items as $item) {
-            $progress->advance(1, true);
+            //$progress->advance(1, true);
             $output->write(" Item <info>" . key($item) . "</info>... ");
 
             $source = $dumper->dump($item, 10000);
@@ -49,6 +49,6 @@ class ConvertToYaml extends AbstractConvert
             $bytes = file_put_contents($path, $source);
             $output->writeln("saved source <comment>$bytes bytes</comment>.");
         }
-        $progress->finish();
+        //$progress->finish();
     }
 }

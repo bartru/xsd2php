@@ -32,13 +32,13 @@ class ConvertToPHP extends AbstractConvert
     {
         $generator = new ClassGenerator();
         $pathGenerator = new Psr4PathGenerator($targets);
-        $progress = $this->getHelperSet()->get('progress');
+        //$progress = $this->getHelperSet()->get('progress');
 
         $items = $converter->convert($schemas);
-        $progress->start($output, count($items));
+        //$progress->start($output, count($items));
 
         foreach ($items as $item) {
-            $progress->advance(1, true);
+            //$progress->advance(1, true);
             $output->write(" Creating <info>" . $output->getFormatter()->escape($item->getFullName()) . "</info>... ");
             $path = $pathGenerator->getPath($item);
 
@@ -58,6 +58,6 @@ class ConvertToPHP extends AbstractConvert
 
             }
         }
-        $progress->finish();
+        //$progress->finish();
     }
 }
